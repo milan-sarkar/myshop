@@ -1,0 +1,569 @@
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #fdf8ef;
+    color: #39392f;
+    font-family: 'DM Sans', sans-serif;
+}
+
+:root {
+    --cream: #fdf8ef;
+    --olive: #5b5d49;
+    --dark: #37372f;
+    --muted: #77776c;
+    --serif: 'Playfair Display', serif;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    min-height: 82px;
+    padding: 15px 3.2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo,
+.footer-logo {
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #62685e;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #a19b80;
+}
+
+.header-btn,
+.primary-btn {
+    background: var(--olive);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.header-btn {
+    padding: 15px 20px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.header-btn:hover,
+.primary-btn:hover {
+    background: #414333;
+}
+
+
+/* =========================
+   PROFILE SECTION
+========================= */
+
+.profile {
+    padding: 85px 8% 90px;
+}
+
+.profile-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.6fr 0.9fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.small-label {
+    display: block;
+    color: #888777;
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.profile-info h1 {
+    font-family: var(--serif);
+    font-size: 54px;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+.profile-info h3 {
+    font-size: 17px;
+    font-weight: 400;
+    margin-bottom: 35px;
+}
+
+.profile-info p {
+    font-size: 15px;
+    line-height: 1.95;
+    margin-bottom: 27px;
+    color: #45453e;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 365px;
+    overflow: hidden;
+    border-radius: 35px 0 35px 0;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.primary-btn {
+    display: inline-block;
+    padding: 17px 48px;
+    margin-top: 28px;
+    font-size: 14px;
+}
+
+
+/* =========================
+   TWO PHOTO SECTION
+========================= */
+
+.photo-section {
+    padding: 90px 8%;
+    background: #f3eee4;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.section-heading h2,
+.help-title h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 43px;
+    margin-bottom: 15px;
+}
+
+.section-heading h2 i,
+.help-title h2 i {
+    color: #85836b;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.photo-grid {
+    max-width: 1050px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+}
+
+.photo-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.6s;
+}
+
+.photo-card:hover img {
+    transform: scale(1.04);
+}
+
+.photo-caption {
+    padding: 22px 5px;
+}
+
+.photo-caption span {
+    font-size: 12px;
+    color: #92917e;
+}
+
+.photo-caption h3 {
+    font-family: var(--serif);
+    font-size: 23px;
+    font-weight: 400;
+    margin: 8px 0;
+}
+
+.photo-caption p {
+    font-size: 14px;
+    color: var(--muted);
+}
+
+
+/* =========================
+   HOW I CAN HELP
+========================= */
+
+.help-section {
+    padding: 100px 8%;
+}
+
+.help-container {
+    max-width: 950px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 65px;
+    min-height: 320px;
+}
+
+.help-title h2 {
+    font-size: 38px;
+}
+
+.help-list {
+    border-left: 1px solid #8d8a7b;
+    padding-left: 35px;
+}
+
+.help-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 13px 0;
+    border-bottom: 1px solid #e8e2d8;
+}
+
+.help-item span {
+    font-size: 11px;
+    color: #99927d;
+}
+
+.help-item p {
+    flex: 1;
+    font-size: 15px;
+}
+
+.help-item i {
+    font-size: 12px;
+    color: #77776c;
+    transition: 0.3s;
+}
+
+.help-item:hover i {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   CONSULTATION BANNER
+========================= */
+
+.consultation {
+    padding: 12px 15%;
+    min-height: 65px;
+
+    background: linear-gradient(
+        90deg,
+        #68685a,
+        #858573
+    );
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.consultation h2 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 18px;
+    color: white;
+}
+
+.light-btn {
+    display: inline-block;
+    text-decoration: none;
+    background: var(--cream);
+    color: var(--olive);
+    padding: 11px 35px;
+    border-radius: 40px;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.light-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 35px 3% 15px;
+}
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 45px;
+}
+
+.footer-logo {
+    font-size: 34px;
+    color: #77776d;
+}
+
+.footer-description p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #65645a;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.5fr 1.5fr;
+    align-items: center;
+    gap: 25px;
+    padding: 0 12px 30px;
+}
+
+.footer-contact a {
+    color: #555449;
+    font-size: 14px;
+}
+
+.footer-contact p,
+.footer-address p {
+    font-size: 14px;
+    color: #555449;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    gap: 22px;
+}
+
+.social-links a {
+    color: #999a98;
+    font-size: 24px;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--olive);
+}
+
+.footer-policies {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-policies a {
+    color: #777469;
+    font-family: var(--serif);
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.copyright {
+    border-top: 1px solid #e8e2d8;
+    text-align: center;
+    padding-top: 18px;
+    color: #888777;
+    font-size: 12px;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        gap: 15px;
+    }
+
+    .profile-container {
+        gap: 45px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .navigation a {
+        font-size: 13px;
+    }
+
+    .profile {
+        padding: 45px 7%;
+    }
+
+    .profile-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .profile-photo {
+        grid-row: 1;
+        height: 380px;
+    }
+
+    .profile-info h1 {
+        font-size: 43px;
+    }
+
+    .photo-section {
+        padding: 65px 7%;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .help-section {
+        padding: 65px 7%;
+    }
+
+    .help-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .consultation {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px 7%;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .footer-policies {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .profile-photo {
+        height: 320px;
+    }
+
+    .profile-info h1 {
+        font-size: 38px;
+    }
+
+    .section-heading h2 {
+        font-size: 31px;
+    }
+
+    .help-item p {
+        font-size: 13px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation h2 {
+        font-size: 17px;
+    }
+
+}
